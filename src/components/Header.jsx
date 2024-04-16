@@ -24,14 +24,14 @@ export function Header() {
                 <button onClick={toggleNavbar}>
                     {
                         isOpen 
-                        ? <X size={32} color="white" />
-                        : <Menu size={32} color="white"/>
+                        ? <X size={28} color="white" />
+                        : <Menu size={28} color="white"/>
                     }
                 </button>
             </nav>
             {
                 isOpen &&
-                <div className="flex flex-col items-end basis-full py-4 gap-4">
+                <div className="flex flex-col items-end basis-full py-4 gap-5">
                     <BrandLinks/>
                 </div>
             }
