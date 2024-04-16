@@ -15,7 +15,7 @@ export function Header() {
     }, []);
 
     return (
-        <header className="px-6 md:px-24 py-4 flex flex-wrap justify-between items-center absolute w-full">
+        <header className="px-6 md:px-24 py-4 flex flex-wrap justify-between items-center sticky">
                 <Logo/>
             <nav className="gap-4 hidden md:flex">
                 <BrandLinks/>
@@ -24,8 +24,8 @@ export function Header() {
                 <button onClick={toggleNavbar}>
                     {
                         isOpen 
-                        ? <X size={42} color="white" />
-                        : <Menu size={42} color="white"/>
+                        ? <X size={36} color="white" />
+                        : <Menu size={36} color="white"/>
                     }
                 </button>
             </nav>
