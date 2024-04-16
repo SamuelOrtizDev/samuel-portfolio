@@ -1,1 +1,1 @@
-this webiste is meant to be portfolio for web development and UI design for Samuel Ortizs
+this website is meant to be portfolio for web development and UI design for Samuel Ortiz
