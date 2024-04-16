@@ -15,7 +15,7 @@ export function Header() {
     }, []);
 
     return (
-        <header className="px-6 md:px-24 py-4 flex flex-wrap justify-between items-center sticky">
+        <header className="px-6 md:px-24 py-4 flex flex-wrap justify-between items-center absolute top-0 w-full">
                 <Logo/>
             <nav className="gap-4 hidden md:flex">
                 <BrandLinks/>
