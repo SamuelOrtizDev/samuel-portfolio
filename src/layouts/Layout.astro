@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { Header } from '../components/Header'
+import '@fontsource-variable/onest';
 ---
 
 <!doctype html>
@@ -16,38 +19,17 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<main>
+	<body class="text-sm md:text-base">
+		<Header client:load/>
+		<main class="px-6 md:px-24">
 			<slot />
 		</main>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: 'Onest Variable', system-ui, sans-serif;
+		background: #070707;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
