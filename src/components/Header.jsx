@@ -20,7 +20,7 @@ export function Header() {
                 <Logo size={165}/>
             </span>
             <span className="md:hidden">
-                <Logo size={90}/>
+                <Logo size={145}/>
             </span>
             <nav className="gap-4 hidden md:flex">
                 <BrandLinks/>
