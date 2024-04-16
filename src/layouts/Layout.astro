@@ -5,8 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { Header } from '../components/Header'
-import '@fontsource-variable/onest';
+import { Header } from "../components/Header";
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -20,16 +20,29 @@ import '@fontsource-variable/onest';
 		<title>{title}</title>
 	</head>
 	<body class="text-sm md:text-base text-light">
-		<Header client:load/>
-		<main class="px-6 md:px-24 py-4">
+		<Header client:load />
+		<main class="px-6 md:px-24 pt-36 pb-10">
 			<slot />
 		</main>
 	</body>
 </html>
 <style is:global>
 	html {
-		font-family: 'Onest Variable', system-ui, sans-serif;
+		font-family: "Onest Variable", system-ui, sans-serif;
 		background: #070707;
 		background-size: 224px;
+	}
+
+	@keyframes blur {
+		to {
+			background: rgba(25, 0, 53, 0.7);
+			backdrop-filter: blur(10px);
+		}
+	}
+
+	#header-nav {
+		animation: blur linear both;
+		animation-timeline: scroll();
+		animation-range: 0 200px;
 	}
 </style>

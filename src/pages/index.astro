@@ -1,11 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Hi, i'm Samuel">
-	<h1>Hola</h1>
+	<section class="flex justify-between">
+		<article class="flex flex-col gap-2">
+			<h1 class="font-bold text-7xl">Hi, i'm <span class="text-purple">Samuel Ortiz</span></h1>
+			<p>Front-end developer and UI Designer</p>
+		</article>
+		<picture class="w-[300px]">
+			<img src="/heroSamuel.png" alt="">
+		</picture>
+	</section>
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
