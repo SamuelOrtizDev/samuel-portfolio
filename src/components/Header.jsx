@@ -24,8 +24,8 @@ export function Header() {
                 <button onClick={toggleNavbar}>
                     {
                         isOpen 
-                        ? <X size={36} color="white" />
-                        : <Menu size={36} color="white"/>
+                        ? <X size={32} color="white" />
+                        : <Menu size={32} color="white"/>
                     }
                 </button>
             </nav>
