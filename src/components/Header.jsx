@@ -15,7 +15,7 @@ export function Header() {
     }, []);
 
     return (
-        <header id="header-nav" className="px-6 md:px-24 py-4 flex flex-wrap justify-between items-center absolute top-0 w-full">
+        <header id="header-nav" className="px-6 md:px-48 py-4 flex flex-wrap justify-between items-center absolute top-0 w-full">
                 <Logo/>
             <nav className="gap-4 hidden md:flex">
                 <BrandLinks/>
@@ -39,29 +39,26 @@ export function Header() {
     )
 }
 
-const BrandLinks = () => {
+export const BrandLinks = () => {
     return (
         <>
             <BrandButton href="https://github.com/SamueLauXd">
                 <Github />
-                Github
             </BrandButton>
 
             <BrandButton href="https://www.linkedin.com/in/samuel-ortiz-8018051b6/">
                 <Linkedin />
-                Linkedin
             </BrandButton>
 
             <BrandButton href="https://www.behance.net/samuelortiz3">
                 <Behance />
-                Behance
             </BrandButton>
         </>
     )
 }
 
 const Logo = () => <svg width='165' height="51.62" viewBox="0 0 201 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_4_2)">
+    <g clipPath="url(#clip0_4_2)">
         <path d="M177.17 14.9703H181.88V29.681C181.88 30.7227 182.237 31.6082 182.952 32.3374C183.666 33.0666 184.522 33.4312 185.519 33.4312H193.711V14.9703H198.421V33.4089C198.421 34.7036 197.96 35.8123 197.037 36.735C196.115 37.6428 194.991 38.0966 193.667 38.0966H185.519C183.986 38.0966 182.587 37.7246 181.322 36.9805C180.057 36.2215 179.045 35.2096 178.286 33.9446C177.542 32.6797 177.17 31.2808 177.17 29.748V14.9703Z" fill="#D0CCD6" />
         <path d="M138.82 19.6804C138.82 18.3857 139.281 17.277 140.204 16.3543C141.126 15.4317 142.243 14.9703 143.552 14.9703H150.606C152.511 14.9703 154.074 15.5656 155.294 16.7562C156.484 15.5656 158.047 14.9703 159.982 14.9703H163.464C164.997 14.9703 166.396 15.3498 167.661 16.1088C168.926 16.8529 169.93 17.8574 170.674 19.1224C171.433 20.3724 171.813 21.7639 171.813 23.2967V38.0966H167.125V23.3637C167.125 22.3368 166.768 21.4662 166.053 20.7519C165.339 20.0227 164.476 19.6581 163.464 19.6581H159.982C159.327 19.6581 158.769 19.8664 158.307 20.2831C157.846 20.6849 157.615 21.176 157.615 21.7564V38.0966H152.905V21.7564C152.905 21.176 152.682 20.6849 152.236 20.2831C151.789 19.8664 151.246 19.6581 150.606 19.6581H143.53V38.0966H138.82V19.6804Z" fill="#D0CCD6" />
         <path d="M112.211 23.2744C112.211 21.7416 112.583 20.3501 113.327 19.1C114.086 17.85 115.098 16.8529 116.363 16.1088C117.628 15.3498 119.027 14.9703 120.56 14.9703H133.462V38.0966H128.752V19.6804H120.56C119.563 19.6804 118.707 20.0376 117.993 20.7519C117.278 21.4514 116.921 22.3071 116.921 23.319V29.7033C116.921 30.7153 117.278 31.5859 117.993 32.3151C118.707 33.0294 119.563 33.3866 120.56 33.3866H126.073V38.0966H120.56C119.027 38.0966 117.628 37.7246 116.363 36.9805C115.098 36.2215 114.086 35.2096 113.327 33.9446C112.583 32.6797 112.211 31.2808 112.211 29.748V23.2744Z" fill="#D0CCD6" />
@@ -79,13 +76,13 @@ const Logo = () => <svg width='165' height="51.62" viewBox="0 0 201 64" fill="no
     </g>
     <defs>
         <linearGradient id="paint0_linear_4_2" x1="8.21654" y1="42.2416" x2="24.5302" y2="25.9279" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#4302DE" />
-            <stop offset="1" stop-color="#8B02DE" />
+            <stop stopColor="#4302DE" />
+            <stop offset="1" stopColor="#8B02DE" />
         </linearGradient>
         <linearGradient id="paint1_linear_4_2" x1="10.1941" y1="54.5718" x2="54.7777" y2="9.9882" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#4302DE" />
-            <stop offset="0.54" stop-color="#8B02DE" />
-            <stop offset="1" stop-color="#F67106" />
+            <stop stopColor="#4302DE" />
+            <stop offset="0.54" stopColor="#8B02DE" />
+            <stop offset="1" stopColor="#F67106" />
         </linearGradient>
         <clipPath id="clip0_4_2">
             <rect width="200" height="63.0562" fill="white" transform="translate(0.954956 0.751892)" />
@@ -93,8 +90,8 @@ const Logo = () => <svg width='165' height="51.62" viewBox="0 0 201 64" fill="no
     </defs>
 </svg>
 
-const Github = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+const Github = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
 
-const Linkedin = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+const Linkedin = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
 
-const Behance = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-behance"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5" /><path d="M3 12l4.5 0" /><path d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1" /><path d="M16 6l3 0" /></svg>
+const Behance = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-behance"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5" /><path d="M3 12l4.5 0" /><path d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1" /><path d="M16 6l3 0" /></svg>
