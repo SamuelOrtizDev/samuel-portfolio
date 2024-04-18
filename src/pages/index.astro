@@ -9,10 +9,12 @@ import { ChevronDown } from "lucide-react";
 		<section class="flex flex-col-reverse md:flex-row md:items-center justify-between">
 			<article class="flex flex-col gap-1 md:gap-2 md:pb-6">
 				<p class="font-medium text-xl md:text-4xl">Hi, i'm</p>
-				<h1 class="font-bold text-5xl md:text-9xl">Samuel <span class="bg-clip-text bg-gradient-to-r from-blue to-orange text-transparent text-orange">Ortiz</span></h1>
+
+				<h1 class="font-bold text-5xl md:text-9xl bg-gradient-to-r from-blue to-orange bg-clip-text text-transparent">Samuel Ortiz</h1>
+
 				<p class="md:text-xl">Frontend Developer and UI Designer</p>
 				<div class="flex flex-col md:flex-row gap-2 md:gap-6 md:items-center mt-4 md:mt-9">
-					<h3 class="font-medium text-xl md:text-4xl">Check Out My</h3>
+					<h3 class="font-medium text-lg md:text-2xl">Check Out My</h3>
 					<span class="flex gap-2">
 						<BrandLinks/>
 					</span>
@@ -30,4 +32,25 @@ import { ChevronDown } from "lucide-react";
 	</div>
 </Layout>
 
-<style></style>
+<style>
+
+	#hero-text::before {
+		content: 'Samuel Ortiz';
+		animation: text-animation 3s infinite;
+	}
+
+	@keyframes text-animation {
+		0% {
+			content: 'Samu Design';
+		}
+
+		50% {
+			content: 'Samuel Ortiz';
+		}
+
+		100% {
+			content: 'Samu Design';
+		}
+	}
+
+</style>
