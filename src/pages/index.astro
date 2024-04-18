@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import {BrandLinks} from '../components/Header'
+import { BrandLinks } from '../components/Header'
 import { ChevronDown } from "lucide-react";
 ---
 
@@ -10,9 +10,9 @@ import { ChevronDown } from "lucide-react";
 			<article class="flex flex-col gap-1 md:gap-2 md:pb-6">
 				<p class="font-medium text-xl md:text-4xl">Hi, i'm</p>
 
-				<h1 class="font-bold text-5xl md:text-9xl bg-gradient-to-r from-blue to-orange bg-clip-text text-transparent">Samuel Ortiz</h1>
+				<h1 class="font-bold text-5xl text-transparent md:text-9xl bg-gradient-to-r from-blue to-orange bg-clip-text">Samuel Ortiz</h1>
 
-				<p class="md:text-xl">Frontend Developer and UI Designer</p>
+				<p class="md:text-xl px-2 p-1 rounded-md bg-purple/30 w-fit" id="hero-text"></p>
 				<div class="flex flex-col md:flex-row gap-2 md:gap-6 md:items-center mt-4 md:mt-9">
 					<h3 class="font-medium text-lg md:text-2xl">Check Out My</h3>
 					<span class="flex gap-2">
@@ -20,14 +20,14 @@ import { ChevronDown } from "lucide-react";
 					</span>
 				</div>
 			</article>
-			<picture class="max-w-4xl">
+			<picture id="hero-image" class="md:max-w-4xl">
 				<img src="/heroImage.webp" alt="">
 			</picture>
 		</section>
 		<section class="flex items-center py-14 md:py-0 justify-center">
-			<span class="rounded-full bg-orange/30 animate-bounce p-2">
+			<button class="rounded-full bg-orange/30 animate-bounce p-2 transition-all ease-in-out duration-200 hover:bg-orange/80">
 				<ChevronDown color="white" size={36}/>
-			</span>
+			</button>
 		</section>
 	</div>
 </Layout>
@@ -35,21 +35,37 @@ import { ChevronDown } from "lucide-react";
 <style>
 
 	#hero-text::before {
-		content: 'Samuel Ortiz';
+		content: 'Frontend Developer';
 		animation: text-animation 3s infinite;
 	}
 
 	@keyframes text-animation {
 		0% {
-			content: 'Samu Design';
+			content: 'UI Designer';
 		}
 
 		50% {
-			content: 'Samuel Ortiz';
+			content: 'Frontend Developer';
 		}
 
 		100% {
-			content: 'Samu Design';
+			content: 'UI Designer';
+		}
+	}
+
+	#hero-image {
+		animation: levitate 6s ease-in-out infinite;
+	}
+
+	@keyframes levitate {
+		0% {
+			transform: translateY(0px)
+		}
+		50% {
+			transform: translateY(-25px);
+		}
+		100% {
+			transform: translateY(0px);
 		}
 	}
 

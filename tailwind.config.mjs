@@ -4,11 +4,12 @@ export default {
 	theme: {
 		extend: {},
 		colors: {
-			'blue' : '#4302DE',
-			'dark' : '#190035',
-			'light' : '#D0CCD6',
-			'purple' : '#8B02DE',
-			'orange' : '#F67106'
+			blue : '#4302DE',
+			dark : '#190035',
+			light : '#D0CCD6',
+			purple : '#8B02DE',
+			orange : '#F67106',
+			transparent: 'transparent'
 		}
 	},
 	plugins: [],
