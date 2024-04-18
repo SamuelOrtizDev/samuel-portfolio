@@ -15,9 +15,9 @@ export function Header() {
     }, []);
 
     return (
-        <header id="header-nav" className="px-6 md:px-48 py-4 flex flex-wrap justify-between items-center fixed top-0 w-full">
+        <header id="header-nav" className="px-6 md:px-48 py-4 flex flex-wrap justify-between items-center z-50 fixed top-0 w-full">
                 <Logo/>
-            <nav className="gap-4 hidden md:flex">
+            <nav id="icons-header" className="gap-4 hidden md:flex">
                 <BrandLinks/>
             </nav>
             <nav className="md:hidden">
