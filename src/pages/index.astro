@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { BrandLinks } from "../components/Header";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "../components/Header";
 ---
 
 <Layout title="Hi, i'm Samuel">
@@ -22,14 +22,12 @@ import { ChevronDown } from "lucide-react";
 				</h1>
 
 				<p
-					class="texto-animado md:text-2xl w-fit px-2 py-1 rounded-md bg-purple/30"
+					class="text-md md:text-2xl w-fit px-2 py-1 rounded-md bg-purple/30"
 				>
-					I'm a
-					<span
-						class="typewrite text-orange"
+					I'm a<span
+						class="typewrite text-orange ml-2"
 						data-period="2000"
-						data-type='["Frontend Developer", "UI Designer"]'
-					>
+						data-type='["Frontend Developer", "UI Designer"]'>
 						<span class="wrap"></span>
 					</span>
 				</p>
@@ -52,7 +50,7 @@ import { ChevronDown } from "lucide-react";
 			<button
 				class="rounded-full bg-orange/30 animate-bounce p-2 transition-all ease-in-out duration-200 hover:bg-orange/80"
 			>
-				<ChevronDown color="white" size={36} />
+				<ChevronDown />
 			</button>
 		</section>
 	</div>
@@ -74,29 +72,10 @@ import { ChevronDown } from "lucide-react";
 			transform: translateY(0px);
 		}
 	}
-
-	#hero-text::before {
-		content: "Frontend Developer";
-		animation: text-animation 3s infinite;
-	}
-
-	@keyframes text-animation {
-		0% {
-			content: "UI Designer";
-		}
-
-		50% {
-			content: "Frontend Developer";
-		}
-
-		100% {
-			content: "UI Designer";
-		}
-	}
 </style>
 
 <script>
-	var TxtType = function (el, toRotate, period) {
+	let TxtType = function (el, toRotate, period) {
 		this.toRotate = toRotate;
 		this.el = el;
 		this.loopNum = 0;
@@ -107,8 +86,8 @@ import { ChevronDown } from "lucide-react";
 	};
 
 	TxtType.prototype.tick = function () {
-		var i = this.loopNum % this.toRotate.length;
-		var fullTxt = this.toRotate[i];
+		let i = this.loopNum % this.toRotate.length;
+		let fullTxt = this.toRotate[i];
 
 		if (this.isDeleting) {
 			this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -118,8 +97,8 @@ import { ChevronDown } from "lucide-react";
 
 		this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
-		var that = this;
-		var delta = 200 - Math.random() * 100;
+		let that = this;
+		let delta = 200 - Math.random() * 100;
 
 		if (this.isDeleting) {
 			delta /= 2;
@@ -140,16 +119,16 @@ import { ChevronDown } from "lucide-react";
 	};
 
 	window.onload = function () {
-		var elements = document.getElementsByClassName("typewrite");
-		for (var i = 0; i < elements.length; i++) {
-			var toRotate = elements[i].getAttribute("data-type");
-			var period = elements[i].getAttribute("data-period");
+		let elements = document.getElementsByClassName("typewrite");
+		for (let i = 0; i < elements.length; i++) {
+			let toRotate = elements[i].getAttribute("data-type");
+			let period = elements[i].getAttribute("data-period");
 			if (toRotate) {
 				new TxtType(elements[i], JSON.parse(toRotate), period);
 			}
 		}
 		// INJECT CSS
-		var css = document.createElement("style");
+		let css = document.createElement("style");
 		css.type = "text/css";
 		css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
 		document.body.appendChild(css);
