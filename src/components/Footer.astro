@@ -1,3 +1,22 @@
+---
+import { Logo } from "./Header";
+---
+
 <footer class="py-10 px-6 md:px-48 border-t border-light/30 mt-20">
-    contenido
+    <article class="py-10 flex items-center justify-between">
+        <div class="flex flex-col gap-2">
+            <Logo/>
+            <p>Frontend Developer</p>
+            <p>UI Designer</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h5 class="font-bold text-xl md:text-2xl">Wanna Talk?</h5>
+            <p>Submit your email to get in touch</p>
+            <form class="flex gap-2 items-center">
+                <input class="px-2 py-1 bg-card rounded-md border border-transparent outline-none focus:border-blue" required placeholder="example@example.com" type="email">
+                <button type="submit" class="px-2 py-1 bg-blue rounded-md">Submit</button>
+            </form>
+        </div>
+    </article>
+    <p class="text-light/50 text-center">this portfolio was designed by Samuel Ortiz and built with Astro</p>
 </footer>
