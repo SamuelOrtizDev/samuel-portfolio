@@ -58,30 +58,30 @@ const behanceProjects = [
 
 
 <article>
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-8">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-14">
         {
             projects.map(({title, description, link, img}) => (
-                <li class="rounded-xl bg-card p-4">
+                <li class="group rounded-xl bg-card p-4 transition-all ease-in-out duration-150 hover:shadow-xl hover:shadow-blue/20">
                     <picture><img src={img} alt={`${img} image`}></picture>
                     <article class="flex flex-col gap-2">
-                        <span class="group flex gap-4 items-center">
-                            <a href={link} target="_blank" class="font-bold text-md md:text-xl hover:underline">{title}</a>
+                        <a href={link} target="_blank" class="flex gap-4 items-center">
+                            <h5 class="font-bold text-md md:text-xl group-hover:underline">{title}</h5>
                             <span class="hidden group-hover:block">
                                 <LinkIcon/>
                             </span>
-                        </span>
+                        </a>
                         <p>{description}</p>    
                     </article>
                 </li>
             ))
         }
     </ul>
-    <p class="font-medium md:text-xl py-4 border-t border-light/50">My featured Behance Projects</p>
+    <p class="font-medium md:text-xl py-8 border-t border-light/50">My featured Behance Projects</p>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
             behanceProjects.map(({title, description, link, img}) => (
                 <li>
-                    <a href={link} target="_blank" class="flex overflow-hidden items-center bg-card rounded-xl">
+                    <a href={link} target="_blank" class="flex overflow-hidden items-center bg-card rounded-xl transition-colors ease-in-out duration-150 hover:bg-light/20">
                             <picture class="w-28"><img src={img} alt={`project ${title} image`}></picture>
                             <span class="px-4">
                                 <h5 class="font-bold">{title}</h5>

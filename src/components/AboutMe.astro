@@ -3,10 +3,10 @@ import CvButton from "./CvButton.astro";
 import MarkDowns from "./MarkDowns.astro";
 ---
 
-<div class="flex flex-col md:flex-row items-center gap-20 justify-between">
+<div class="flex flex-col md:flex-row items-center gap-6 md:gap-28 justify-between">
     <picture>
         <img
-            class="[max-width:400px] [mask-image:_linear-gradient(black_70%,_transparent)]"
+            class="md:[max-width:400px] [mask-image:_linear-gradient(black_70%,_transparent)]"
             src="/knowSamuel.png"
             alt=""
         />
@@ -14,7 +14,7 @@ import MarkDowns from "./MarkDowns.astro";
     <article class="flex flex-col gap-8">
         <span>
             <h3 class="font-bold md:text-3xl text-xl">Samuel Ortiz</h3>
-            <p>Interactive Media Designer</p>
+            <p class="text-purple">Interactive Media Designer</p>
         </span>
         <MarkDowns />
         <p>
