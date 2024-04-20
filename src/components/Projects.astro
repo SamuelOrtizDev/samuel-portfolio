@@ -61,18 +61,18 @@ const behanceProjects = [
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-14">
         {
             projects.map(({title, description, link, img}) => (
-                <li class="group rounded-xl bg-card p-4 transition-all ease-in-out duration-150 hover:shadow-xl hover:shadow-blue/20">
+                <a href={link} target="_blank" class="group rounded-xl bg-card p-4 transition-all ease-in-out duration-150 hover:shadow-xl hover:shadow-blue/20">
                     <picture><img src={img} alt={`${img} image`}></picture>
                     <article class="flex flex-col gap-2">
-                        <a href={link} target="_blank" class="flex gap-4 items-center">
+                        <div class="flex gap-4 items-center">
                             <h5 class="font-bold text-md md:text-xl group-hover:underline">{title}</h5>
                             <span class="hidden group-hover:block">
                                 <LinkIcon/>
                             </span>
-                        </a>
+                        </div>
                         <p>{description}</p>    
                     </article>
-                </li>
+                </a>
             ))
         }
     </ul>
