@@ -21,7 +21,7 @@ import "@fontsource-variable/onest";
 	</head>
 	<body class="text-sm md:text-base text-light">
 		<Header client:load />
-		<main class="px-6 md:px-48 pt-20 pb-5 md:pt-28 md:pb-10">
+		<main class="px-6 md:px-48 pt-20 pb-5 md:pt-28 md:pb-10 text-sm md:text-base">
 			<slot />
 		</main>
 	</body>
@@ -31,6 +31,7 @@ import "@fontsource-variable/onest";
 		font-family: "Onest Variable", system-ui, sans-serif;
 		background: #070707;
 		background-size: 224px;
+		scroll-behavior: smooth;
 	}
 
 	@keyframes blur {

@@ -1,0 +1,18 @@
+---
+const tech = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Next js',
+    'Astro',
+    'Tailwind CSS',
+    'Angular'
+]
+---
+
+<ul class="flex flex-wrap gap-2 items-center justify-around px-4 py-2 bg-card rounded-md">
+    {
+        tech.map(it => <li>{it}</li>)
+    }
+</ul>
