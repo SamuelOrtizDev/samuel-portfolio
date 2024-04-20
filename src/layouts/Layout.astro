@@ -21,7 +21,9 @@ import "@fontsource-variable/onest";
 	</head>
 	<body class="text-sm md:text-base text-light">
 		<Header client:load />
-		<main class="px-6 md:px-48 pt-20 pb-5 md:pt-28 md:pb-10 text-sm md:text-base">
+		<main
+			class="px-6 md:px-48 pt-20 pb-5 md:pt-28 md:pb-10 text-sm md:text-base"
+		>
 			<slot />
 		</main>
 	</body>
@@ -34,16 +36,8 @@ import "@fontsource-variable/onest";
 		scroll-behavior: smooth;
 	}
 
-	@keyframes blur {
-		to {
-			background: rgba(7, 7, 7, 0.5);
-			backdrop-filter: blur(10px);
-		}
-	}
-
 	#header-nav {
-		animation: blur linear both;
-		animation-timeline: scroll();
-		animation-range: 0 200px;
+		background: rgba(7, 7, 7, 0.5);
+		backdrop-filter: blur(10px);
 	}
 </style>
