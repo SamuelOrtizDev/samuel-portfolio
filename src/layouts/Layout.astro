@@ -42,4 +42,17 @@ import "@fontsource-variable/onest";
 		background: rgba(7, 7, 7, 0.5);
 		backdrop-filter: blur(10px);
 	}
+
+	#icons-header {
+		opacity: 0;
+		animation: appear linear both;
+		animation-timeline: scroll();
+		animation-range: 450px 800px;
+	}
+
+	@keyframes appear {
+		to {
+			opacity: 100%;
+		}
+	}
 </style>
