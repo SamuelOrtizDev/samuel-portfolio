@@ -52,6 +52,10 @@ export const BrandLinks = () => {
             <BrandButton href="https://www.behance.net/samuelortiz3">
                 <Behance />
             </BrandButton>
+
+            <BrandButton href="/CV English-Samuel Ortiz.pdf">
+                CV
+            </BrandButton>
         </>
     )
 }
