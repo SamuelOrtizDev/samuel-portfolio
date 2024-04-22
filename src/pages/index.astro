@@ -39,7 +39,7 @@ import { Technologies } from "../components/Technologies";
 					</span>
 				</div>
 			</article>
-			<picture id="hero-image" class="md:max-w-4xl">
+			<picture id="hero-image" class="md:max-w-4xl transition-all duration-300 ease-out hover:drop-shadow-[0_-10px_40px_rgb(67,2,222,0.8)]">
 				<img src="/heroImage.webp" alt="" />
 			</picture>
 		</section>
@@ -76,15 +76,19 @@ import { Technologies } from "../components/Technologies";
 		animation: levitate 6s ease-in-out infinite;
 	}
 
+	#hero-image:hover {
+		animation: levitate 6s ease-in-out infinite;
+	}
+
 	@keyframes levitate {
 		0% {
-			transform: translateY(0px);
+			transform: translateY(15px);
 		}
 		50% {
-			transform: translateY(-10px);
+			transform: translateY(-15px);
 		}
 		100% {
-			transform: translateY(0px);
+			transform: translateY(15px);
 		}
 	}
 </style>
