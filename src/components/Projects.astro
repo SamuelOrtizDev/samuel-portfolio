@@ -1,92 +1,112 @@
 ---
-import LinkIcon from "./LinkIcon.astro"
+import LinkIcon from "./LinkIcon.astro";
 
 const projects = [
     {
-        title: 'Rick and Morty API Rest',
-        description: 'Dashboard of all the characters of the Rick and Morty series using the open source API. Built with Next js',
-        link: 'https://rickandmorty-dashboard.vercel.app',
-        img: '/RyM.webp'
+        title: "Rick and Morty API Rest",
+        description:
+            "Dashboard of all the characters of the Rick and Morty series using the open source API. Built with Next js",
+        link: "https://rickandmorty-dashboard.vercel.app",
+        img: "/RyM.webp",
     },
     {
-        title: 'To Do List App',
-        description: 'Web Application for submitting a list of things to do. Built wit Next js',
-        link: 'https://to-do-list-eight-kohl.vercel.app',
-        img: '/To do.webp'
+        title: "To Do List App",
+        description:
+            "Web Application for submitting a list of things to do. Built wit Next js",
+        link: "https://to-do-list-eight-kohl.vercel.app",
+        img: "/To do.webp",
     },
     {
-        title: 'Spotify Clone',
-        description: 'Spotify Clone simulating an SPA using astro view transitions. Built with Astro',
-        link: 'https://spotify-clon-self.vercel.app',
-        img: '/Spotify.webp'
+        title: "Spotify Clone",
+        description:
+            "Spotify Clone simulating an SPA using astro view transitions. Built with Astro",
+        link: "https://spotify-clon-self.vercel.app",
+        img: "/Spotify.webp",
     },
     {
-        title: 'T&V Landing Page',
-        description: 'Design, development and deployment of a Landing Page for a client. Built with Next js',
-        link: 'https://tokensandvalues.com',
-        img: '/tokens.webp'
+        title: "T&V Landing Page",
+        description:
+            "Design, development and deployment of a Landing Page for a client. Built with Next js",
+        link: "https://tokensandvalues.com",
+        img: "/tokens.webp",
     },
     {
-        title: 'Ezmos Landing Page',
-        description: 'Design, development and deployment of a Landing Page for a client. Built with Next js',
-        link: '#',
-        img: '/Ezmos.webp'
-    }
-]
+        title: "Ezmos Landing Page",
+        description:
+            "Design, development and deployment of a Landing Page for a client. Built with Next js",
+        link: "#",
+        img: "/Ezmos.webp",
+    },
+];
 
 const behanceProjects = [
     {
-        title : 'enerBit para todos',
-        description : 'App redesign with challenge',
-        img : '/enerBit.webp',
-        link : 'https://www.behance.net/gallery/185589965/enerBit-Para-todos-UIUX-Project'
+        title: "enerBit para todos",
+        description: "App redesign with challenge",
+        img: "/enerBit.webp",
+        link: "https://www.behance.net/gallery/185589965/enerBit-Para-todos-UIUX-Project",
     },
     {
-        title : 'Dunkin´ OOH',
-        description : 'Dunkin´ videogame strategy',
-        img : '/dunkinOOH.webp',
-        link : 'https://www.behance.net/gallery/165097973/Dunkin-OOH'
+        title: "Dunkin´ OOH",
+        description: "Dunkin´ videogame strategy",
+        img: "/dunkinOOH.webp",
+        link: "https://www.behance.net/gallery/165097973/Dunkin-OOH",
     },
     {
-        title : 'Phorama App',
-        description : 'Videogames delivery app',
-        img : '/phorama.webp',
-        link : 'https://www.behance.net/gallery/158344441/Phorama-UX-Research'
+        title: "Phorama App",
+        description: "Videogames delivery app",
+        img: "/phorama.webp",
+        link: "https://www.behance.net/gallery/158344441/Phorama-UX-Research",
     },
-]
+];
 ---
-
 
 <article>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-14">
         {
-            projects.map(({title, description, link, img}) => (
-                <a href={link} target="_blank" class="group rounded-xl bg-card p-4 transition-all ease-in-out duration-150 hover:shadow-xl hover:shadow-blue/20">
-                    <picture><img src={img} alt={`${img} image`}></picture>
-                    <article class="flex flex-col gap-2">
-                        <div class="flex gap-4 items-center">
-                            <h5 class="font-bold text-md md:text-xl group-hover:underline">{title}</h5>
-                            <span class="hidden group-hover:block">
-                                <LinkIcon/>
-                            </span>
-                        </div>
-                        <p>{description}</p>    
-                    </article>
-                </a>
-            ))
+            projects.map(({ title, description, link, img }) => {
+                return (
+                    <li class="group rounded-xl bg-card p-4 transition-all ease-in-out duration-150 hover:shadow-xl hover:shadow-blue/20">
+                        <a href={link} target="_blank">
+                            <picture>
+                                <img src={img} alt={`${img} image`} />
+                            </picture>
+                            <article class="flex flex-col gap-2">
+                                <div class="flex gap-4 items-center">
+                                    <h5 class="font-bold text-md md:text-xl group-hover:underline">
+                                        {title}
+                                    </h5>
+                                    <span class="hidden group-hover:block">
+                                        <LinkIcon />
+                                    </span>
+                                </div>
+                                <p>{description}</p>
+                            </article>
+                        </a>
+                    </li>
+                );
+            })
         }
     </ul>
-    <p class="font-medium md:text-xl py-8 border-t border-light/50">My featured Behance Projects</p>
+    <p class="font-medium md:text-xl py-8 border-t border-light/50">
+        My featured Behance Projects
+    </p>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
-            behanceProjects.map(({title, description, link, img}) => (
+            behanceProjects.map(({ title, description, link, img }) => (
                 <li>
-                    <a href={link} target="_blank" class="flex overflow-hidden items-center bg-card rounded-xl transition-colors ease-in-out duration-150 hover:bg-light/20">
-                            <picture class="w-28"><img src={img} alt={`project ${title} image`}></picture>
-                            <span class="px-4">
-                                <h5 class="font-bold">{title}</h5>
-                                <p class="text-sm">{description}</p>
-                            </span>
+                    <a
+                        href={link}
+                        target="_blank"
+                        class="flex overflow-hidden items-center bg-card rounded-xl transition-colors ease-in-out duration-150 hover:bg-light/20"
+                    >
+                        <picture class="w-28">
+                            <img src={img} alt={`project ${title} image`} />
+                        </picture>
+                        <span class="px-4">
+                            <h5 class="font-bold">{title}</h5>
+                            <p class="text-sm">{description}</p>
+                        </span>
                     </a>
                 </li>
             ))
