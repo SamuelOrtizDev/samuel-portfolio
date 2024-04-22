@@ -1,28 +1,28 @@
 export function Technologies () {
     return (
         <ul className="flex flex-wrap gap-2 items-center justify-around px-4 py-2 bg-card rounded-md">
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <HTML/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <Css/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <JavaScript/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <React/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <Astro/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <NextJS/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <TailwindCss/>
             </li>
-            <li>
+            <li className="transition-colors ease-in-out duration-150 hover:text-orange">
                 <Angular/>
             </li>
         </ul>
