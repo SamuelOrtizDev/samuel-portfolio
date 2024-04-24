@@ -1,31 +1,59 @@
 export function Technologies () {
     return (
-        <ul className="flex flex-wrap gap-2 items-center justify-around px-4 py-2 bg-card rounded-md">
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <HTML/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <Css/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <JavaScript/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <React/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <Astro/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <NextJS/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <TailwindCss/>
-            </li>
-            <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
-                <Angular/>
-            </li>
-        </ul>
+        <>
+            <ul className="hidden md:flex flex-wrap gap-2 items-center justify-around px-4 py-2 bg-card rounded-md">
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <HTML/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Css/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <JavaScript/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <React/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Astro/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <NextJS/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <TailwindCss/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Angular/>
+                </li>
+            </ul>
+            <ul className="grid md:hidden grid-cols-4 gap-y-8 place-items-center px-4 py-2 bg-card rounded-md">
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <HTML/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Css/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <JavaScript/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <React/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Astro/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <NextJS/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <TailwindCss/>
+                </li>
+                <li className="transition-colors ease-in-out duration-150 hover:text-orange text-light">
+                    <Angular/>
+                </li>
+            </ul>
+        </>
     )
 }
 
