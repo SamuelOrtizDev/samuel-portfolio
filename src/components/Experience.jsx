@@ -1,4 +1,4 @@
-const portfolioData = [
+const experience = [
   {
     company: "Sports Funded",
     title: "Frontend Developer",
@@ -29,9 +29,9 @@ function ExperienceItem({ item }) {
   return (
     <li className="bg-card shadow-md rounded-lg overflow-hidden">
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-4">{item.company}</h3>
+        <h3 className="text-xl md:text-2xl font-extrabold tracking-wide mb-4">{item.company}</h3>
         <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
-          <span className="font-semibold text-purple">{item.title}</span>
+          <span className="font-bold text-lg text-purple/60 bg-light bg-clip-text">{item.title}</span>
           <span>{item.date}</span>
         </div>
         <p>{item.description}</p>
@@ -43,7 +43,7 @@ function ExperienceItem({ item }) {
 export function Experience() {
   return (
     <ul className="flex flex-col gap-8">
-      {portfolioData.map((item, index) => (
+      {experience.map((item, index) => (
         <ExperienceItem key={index} item={item} />
       ))}
     </ul>
