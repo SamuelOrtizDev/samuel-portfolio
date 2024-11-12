@@ -29,9 +29,9 @@ function ExperienceItem({ item }) {
   return (
     <li className="bg-card shadow-md rounded-lg overflow-hidden">
       <div className="p-6">
-        <h3 className="text-xl md:text-2xl font-extrabold tracking-wide mb-4">{item.company}</h3>
+        <span className="font-medium text-lg opacity-60">{item.title}</span>
         <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
-          <span className="font-bold text-lg text-purple/60 bg-light bg-clip-text">{item.title}</span>
+          <h3 className="text-xl md:text-3xl font-extrabold tracking-wide mb-4">{item.company}</h3>
           <span>{item.date}</span>
         </div>
         <p>{item.description}</p>
