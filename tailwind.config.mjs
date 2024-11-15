@@ -10,7 +10,8 @@ export default {
 			purple : '#8B02DE',
 			orange : '#F67106',
 			card : '#151515',
-			transparent: 'transparent'
+			transparent: 'transparent',
+			white : '#fff'
 		}
 	},
 	plugins: [],
