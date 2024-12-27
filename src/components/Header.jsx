@@ -41,7 +41,7 @@ export function Header() {
 export const BrandLinks = () => {
     return (
         <>
-            <BrandButton href="https://github.com/SamueLauXd">
+            <BrandButton href="https://github.com/SamuelOrtizDev">
                 <Github />
             </BrandButton>
 
