@@ -1,5 +1,11 @@
 const experience = [
   {
+    company: "CI&T",
+    title: "Frontend Enginner",
+    date: "Feb 2025 - Present",
+    description: "Developed responsive web applications using React and Vanilla JS",
+  },
+  {
     company: "Sports Funded",
     title: "Frontend Developer",
     date: "Jun 2024 - Present",
@@ -45,28 +51,3 @@ export function Experience() {
     </ol>
   )
 }
-
-// function ExperienceItem({ item }) {
-//   return (
-//     <li className="bg-card shadow-md rounded-lg overflow-hidden">
-//       <div className="p-6">
-//         <span className="font-medium text-lg opacity-60">{item.title}</span>
-//         <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
-//           <h3 className="text-xl md:text-3xl font-extrabold tracking-wide mb-4">{item.company}</h3>
-//           <span>{item.date}</span>
-//         </div>
-//         <p>{item.description}</p>
-//       </div>
-//     </li>
-//   )
-// }
-
-// export function Experience() {
-//   return (
-//     <ul className="flex flex-col gap-8">
-//       {experience.map((item, index) => (
-//         <ExperienceItem key={index} item={item} />
-//       ))}
-//     </ul>
-//   )
-// }
