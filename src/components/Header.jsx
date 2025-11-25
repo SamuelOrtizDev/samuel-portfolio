@@ -45,7 +45,7 @@ export const BrandLinks = () => {
                 <Github />
             </BrandButton>
 
-            <BrandButton href="https://www.linkedin.com/in/samuel-ortiz-8018051b6/">
+            <BrandButton href="https://www.linkedin.com/in/samuel-ortiz-dev/">
                 <Linkedin />
             </BrandButton>
 
