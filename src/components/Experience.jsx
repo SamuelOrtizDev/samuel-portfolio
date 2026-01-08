@@ -27,11 +27,11 @@ const experience = [
 
 function ExperienceItem({ item }) {
   return (
-    <li class="mb-16 flex flex-col gap-3 last:mb-0 ms-4">
-      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border bg-orange border-light"></div>
-      <time class="text-sm">{item.date}</time>
-      <h3 class="text-3xl font-semibold">{item.company} <span className="text-base font-normal block md:inline"><span className="hidden md:inline">/ </span>{item.title}</span></h3>
-      <p class="text-light/70">{item.description}</p>
+    <li className="mb-16 flex flex-col gap-3 last:mb-0 ms-4">
+      <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border bg-orange border-light"></div>
+      <time className="text-sm">{item.date}</time>
+      <h3 className="text-3xl font-semibold">{item.company} <span className="text-base font-normal block md:inline"><span className="hidden md:inline">/ </span>{item.title}</span></h3>
+      <p className="text-light/70">{item.description}</p>
     </li>
   )
 }
